@@ -1,0 +1,89 @@
+body {
+    background-color: black;
+    overflow: hidden;/*nao ter a rolagem*/
+}
+main::after{/*coloca elemento no final da main*/
+    content:"" ;
+    position: fixed;
+    top: 0;/*mudando p onde quiser*/
+    left: 0;
+    min-height: 100vh;
+    width: 80vw;
+    background: linear-gradient(-233deg,
+    #000 40%, rgba(0,0,0,0) 65%) no-repeat;
+}
+main .personagem {
+    display: none;/* nao aparecer */
+    height: 100vh;
+}
+main .personagem.selecionado{
+    display: block;/*para aparecer */
+}
+main .personagem .imagem{
+    width: 100%;/*ocupa toda a largura*/
+    height: 100%;/*ocupa toda a altura*/
+    object-fit: cover;/*a imagem ou vídeo será dimensionado para preencher completamente o contêiner,
+     mantendo sua proporção original*/
+}
+.conteudo {
+    position: absolute;/*bota por cima*/
+    top: 0;/*vai la pra cima*/
+    left: 120px;/*afastou 120px da esquerda*/
+    display: flex;/*elementos(da div conteudo)flexiveis no container */
+    flex-direction: column;/*bota embaixo*/
+    justify-content: center;/*centraliza verticalmente*/
+    min-height: 100vh;/*altura minima ocupando tudo da tela, p ver o justify center*/
+    max-width: 380px;/*max de largura*/
+    z-index: 1;/*eixo z*/
+}
+ .conteudo .nome-personagem{
+    color: white;
+    font-size: 48px;
+    font-family: "Secular One";
+    font-weight: 400;
+    margin-bottom: 20px; /*espaçamento embaixo*/
+ }
+
+.conteudo .descricao{
+    color: white;
+    font-family: "Rubik";
+    line-height: 24px;
+}
+
+.conteudo .logo{
+    background-image: url("../imagens/one-piece-logo.png");
+    background-size: cover;/*para cobrir a área*/
+    height: 100px;
+    width: 230px;
+    margin-bottom: 35px;
+}
+.botoes{
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+    min-height: 100vh;
+    justify-content: center;
+    gap: 10px;/*espaçamento entre eles apos display flex*/
+    align-items: center;/*alinhamento horizontal*/
+    background-color: rgba(0,0,0,
+    0.3 );/*o ultimo elemento é a opacidade*/
+}
+
+.botoes .botao {
+    border:none;
+    background: #000;
+    cursor: pointer; /*maozinha*/
+    border-radius: 50%;
+
+
+}
+.botoes .botao img {
+    border-radius: 50%;
+}
+.botoes .botao.selecionado {
+    transform: scale(1.2);/*aumenta o tamanho*/
+    box-shadow: 0 0 10px #D9D9D9;
+}

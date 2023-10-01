@@ -1,0 +1,9 @@
+* {
+    margin: 0;/* deixa colado */
+    padding: 0; /*tira espaçamento entre os objetos */
+    box-sizing: border-box;
+}
+ ul {
+    list-style: none; /* tira a bolinha */
+
+ }

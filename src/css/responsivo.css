@@ -27,7 +27,7 @@ só o escrito abaixo*/
         flex-direction: row;/*em linha*/
         align-items: flex-end;/*la pra baixo*/
         width: 100%;/*ocupa todo o espaço de baixo*/
-        padding: 30px;/*p nao ficar grudado*/
+        padding: 60px;/*p nao ficar grudado*/
     }
     .botoes .botao img{
         max-width: 60px;
